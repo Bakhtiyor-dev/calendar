@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Календарь</h2>
+
+    <div class="calendar">
+
+        <div class="calendar__opts">
+            <select id="calendar__month" onchange="showCalendar(curr_year,this.value)"></select>
+            <select id="calendar__year" onchange="showCalendar(this.value,curr_month)"></select>
+        </div>
+
+        <div class="calendar__body pb-3">
+            <div class="calendar__days">
+                <div>Пн</div>
+                <div>Вт</div>
+                <div>Ср</div>
+                <div>Чт</div>
+                <div>Пт</div>
+                <div>Сб</div>
+                <div>Вс</div>
+            </div>
+            <div class="calendar__dates" id="calendar"></div>
+        </div>
+
+        <p class="text-monospace text-center mt-3 text-muted">(Cделал А.Бахтиёр) </p>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
